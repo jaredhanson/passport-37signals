@@ -59,6 +59,8 @@ For a complete, working example, refer to the [login example](https://github.com
     $ npm install --dev
     $ make test
 
+[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-37signals.png)](http://travis-ci.org/jaredhanson/passport-37signals)
+
 ## Credits
 
   - [Jared Hanson](http://github.com/jaredhanson)

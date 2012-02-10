@@ -1,7 +1,7 @@
 # Passport-37signals
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
-with 37signals using the OAuth 2.0 API.
+with [37signals](http://37signals.com/) using the OAuth 2.0 API.
 
 ## Installation
 

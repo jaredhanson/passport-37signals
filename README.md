@@ -3,11 +3,11 @@
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
 with [37signals](http://37signals.com/) using the OAuth 2.0 API.
 
-This module lets you authenticate using 37signals in your Node.js applications.
-By plugging into Passport, 37signals authentication can be easily and
-unobtrusively integrated into any application or framework that supports
-[Connect](http://www.senchalabs.org/connect/)-style middleware, including
-[Express](http://expressjs.com/).
+This module lets you authenticate using 37signals, including Basecamp, Highrise,
+and Campfire, in your Node.js applications.  By plugging into Passport, 37signals
+authentication can be easily and unobtrusively integrated into any application or
+framework that supports [Connect](http://www.senchalabs.org/connect/)-style
+middleware, including [Express](http://expressjs.com/).
 
 ## Install
 

@@ -1,4 +1,10 @@
-# Passport-37signals
+# passport-37signals
+
+[![Build](https://travis-ci.org/jaredhanson/passport-37signals.png)](https://travis-ci.org/jaredhanson/passport-37signals)
+[![Coverage](https://coveralls.io/repos/jaredhanson/passport-37signals/badge.png)](https://coveralls.io/r/jaredhanson/passport-37signals)
+[![Quality](https://codeclimate.com/github/jaredhanson/passport-37signals.png)](https://codeclimate.com/github/jaredhanson/passport-37signals)
+[![Dependencies](https://david-dm.org/jaredhanson/passport-37signals.png)](https://david-dm.org/jaredhanson/passport-37signals)
+[![Tips](http://img.shields.io/gittip/jaredhanson.png)](https://www.gittip.com/jaredhanson/)
 
 [Passport](https://github.com/jaredhanson/passport) strategy for authenticating
 with [37signals](http://37signals.com/) using the OAuth 2.0 API.
@@ -58,10 +64,8 @@ For a complete, working example, refer to the [login example](https://github.com
 
 ## Tests
 
-    $ npm install --dev
-    $ make test
-
-[![Build Status](https://secure.travis-ci.org/jaredhanson/passport-37signals.png)](http://travis-ci.org/jaredhanson/passport-37signals)
+    $ npm install
+    $ npm test
 
 ## Credits
 
@@ -71,4 +75,4 @@ For a complete, working example, refer to the [login example](https://github.com
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2013 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
+Copyright (c) 2012-2014 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>

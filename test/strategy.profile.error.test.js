@@ -3,7 +3,7 @@ var Thirty7SignalsStrategy = require('../lib/strategy');
 
 describe('Strategy#userProfile', function() {
     
-  describe.skip('handling API errors', function() {
+  describe('handling API errors', function() {
     var strategy =  new Thirty7SignalsStrategy({
         clientID: 'ABC123',
         clientSecret: 'secret'
@@ -15,13 +15,8 @@ describe('Strategy#userProfile', function() {
         if (url != 'https://launchpad.37signals.com/authorization.json') { return callback(new Error('wrong url argument')); }
         if (accessToken != 'token') { return callback(new Error('wrong token argument')); }
       
-        var body = '{ \
-             "error": { \
-                "code": "request_token_expired", \
-                "message": "The provided access token has expired." \
-             } \
-          }';
-    
+        var body = '{"error":"OAuth token could not be verified. The internal checksum failed, so the token data was somehow mangled or tampered with."}';
+        
         callback({ statusCode: 401, data: body });
       }
       
@@ -36,9 +31,8 @@ describe('Strategy#userProfile', function() {
   
     it('should error', function() {
       expect(err).to.be.an.instanceOf(Error);
-      expect(err.constructor.name).to.equal('LiveConnectAPIError');
-      expect(err.message).to.equal('The provided access token has expired.');
-      expect(err.code).to.equal('request_token_expired');
+      expect(err.constructor.name).to.equal('APIError');
+      expect(err.message).to.equal('OAuth token could not be verified. The internal checksum failed, so the token data was somehow mangled or tampered with.');
     });
   });
   

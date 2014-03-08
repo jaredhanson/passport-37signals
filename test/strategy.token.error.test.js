@@ -33,7 +33,7 @@ describe('Strategy', function() {
       });
   
       it('should error', function() {
-        expect(err.constructor.name).to.equal('Error');
+        expect(err.constructor.name).to.equal('APIError');
         expect(err.message).to.equal('Unsupported type: nil. Expected web_server or refresh.');
       });
     });

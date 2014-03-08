@@ -2,7 +2,7 @@
 
 var strategy = require('..');
 
-describe('passport-windowslive', function() {
+describe('passport-37signals', function() {
     
   it('should export Strategy constructor directly from package', function() {
     expect(strategy).to.be.a('function');

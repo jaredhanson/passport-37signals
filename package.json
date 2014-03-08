@@ -32,7 +32,7 @@
       "url": "http://www.opensource.org/licenses/MIT"
     }
   ],
-  "main": "./lib/passport-37signals",
+  "main": "./lib",
   "dependencies": {
     "passport-oauth2": "1.x.x"
   },

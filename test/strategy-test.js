@@ -1,7 +1,7 @@
 var vows = require('vows');
 var assert = require('assert');
 var util = require('util');
-var Thirty7SignalsStrategy = require('passport-37signals/strategy');
+var Thirty7SignalsStrategy = require('../lib/strategy');
 
 
 vows.describe('Thirty7SignalsStrategy').addBatch({

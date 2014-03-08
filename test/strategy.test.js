@@ -1,3 +1,6 @@
+/* global describe, it, expect */
+/* jshint expr: true */
+
 var Thirty7SignalsStrategy = require('../lib/strategy');
 
 

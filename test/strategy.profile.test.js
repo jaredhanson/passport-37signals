@@ -1,3 +1,6 @@
+/* global describe, it, expect, before */
+/* jshint expr: true */
+
 var Thirty7SignalsStrategy = require('../lib/strategy');
 
 
@@ -9,15 +12,15 @@ describe('Strategy#userProfile', function() {
     },
     function() {});
   
-    // mock
-    strategy._oauth2.get = function(url, accessToken, callback) {
-      if (url != 'https://launchpad.37signals.com/authorization.json') { return callback(new Error('wrong url argument')); }
-      if (accessToken != 'token') { return callback(new Error('wrong token argument')); }
-      
-      var body = '{"expires_at":"2012-01-25T18:30:08Z","accounts":[{"name":"ACME Corp","href":"https://acmecorp.highrisehq.com","id":333,"product":"highrise"},{"name":"johndoe","href":"https://johndoe.backpackit.com","id":22222,"product":"backpack"},{"name":"ACME Corp","href":"https://acmecorp.basecamphq.com","id":1111111,"product":"basecamp"},{"name":"StealthBus","href":"https://stealthbus.basecamphq.com","id":1221222,"product":"basecamp"}],"identity":{"id":5555,"last_name":"Doe","email_address":"john.doe@example.com","first_name":"John"}}';
+  // mock
+  strategy._oauth2.get = function(url, accessToken, callback) {
+    if (url != 'https://launchpad.37signals.com/authorization.json') { return callback(new Error('wrong url argument')); }
+    if (accessToken != 'token') { return callback(new Error('wrong token argument')); }
     
-      callback(null, body, undefined);
-    }
+    var body = '{"expires_at":"2012-01-25T18:30:08Z","accounts":[{"name":"ACME Corp","href":"https://acmecorp.highrisehq.com","id":333,"product":"highrise"},{"name":"johndoe","href":"https://johndoe.backpackit.com","id":22222,"product":"backpack"},{"name":"ACME Corp","href":"https://acmecorp.basecamphq.com","id":1111111,"product":"basecamp"},{"name":"StealthBus","href":"https://stealthbus.basecamphq.com","id":1221222,"product":"basecamp"}],"identity":{"id":5555,"last_name":"Doe","email_address":"john.doe@example.com","first_name":"John"}}';
+  
+    callback(null, body, undefined);
+  };
     
   describe('loading profile', function() {
     var profile;
